@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая форма</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="form-view" class="form-view">
+            <h1>Добро пожаловать!</h1>
+            <p class="subtitle">Пожалуйста, заполните форму ниже</p>
+            
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Почта</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comment">Комментарий</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </div>
+        
+        <div id="success-view" class="success-view hidden">
+            <div class="success-icon">✓</div>
+            <h2>Спасибо!</h2>
+            <p>Ваша форма успешно отправлена.</p>
+            <button id="reset-btn" class="reset-btn">Отправить еще раз</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
