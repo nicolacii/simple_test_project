@@ -28,7 +28,8 @@ async function saveFormData(data) {
         }
     } catch (error) {
         console.error('Ошибка при отправке данных:', error);
-        alert('Ошибка соединения с сервером. Проверьте, что сервер запущен.');
+        console.error('Детали ошибки:', error.message, error.stack);
+        alert('Ошибка соединения с сервером: ' + error.message);
         return false;
     }
 }
