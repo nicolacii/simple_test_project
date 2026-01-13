@@ -16,6 +16,12 @@ async function saveFormData(data) {
             body: JSON.stringify(data)
         });
 
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('Ошибка ответа сервера:', response.status, errorText);
+            throw new Error(`Ошибка сервера: ${response.status} - ${errorText}`);
+        }
+
         const result = await response.json();
 
         if (result.success) {
